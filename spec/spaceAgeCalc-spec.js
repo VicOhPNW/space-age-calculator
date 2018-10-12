@@ -3,39 +3,49 @@ import { spaceAgeCalculator } from '../src/spaceAgeCalc.js';
 describe('calculateMercuryAge', function() {
     it('should calculate and return the age in Mercury years', function() {
       let test = new spaceAgeCalculator(35, 100);
-      expect(test.calculateMercuryAge()).toEqual(8);
+      expect(test.calculateMercuryAge()).toEqual(145);
 
       let test2 = new spaceAgeCalculator(100, 100);
-      expect(test2.calculateMercuryAge()).toEqual(24);
+      expect(test2.calculateMercuryAge()).toEqual(416);
     });
 });
 
 describe('calculateVenusAge', function() {
     it('should calculate and return the age in Venus years', function() {
       let test = new spaceAgeCalculator(35, 100);
-      expect(test.calculateVenusAge()).toEqual(21);
+      expect(test.calculateVenusAge()).toEqual(56);
 
       let test2 = new spaceAgeCalculator(100, 100);
-      expect(test2.calculateVenusAge()).toEqual(62);
+      expect(test2.calculateVenusAge()).toEqual(161);
     });
 });
 
 describe('calculateMarsAge', function() {
     it('should calculate and return the age in Mars years', function() {
       let test = new spaceAgeCalculator(35, 100);
-      expect(test.calculateMarsAge()).toEqual(65);
+      expect(test.calculateMarsAge()).toEqual(18);
 
       let test2 = new spaceAgeCalculator(100, 100);
-      expect(test2.calculateMarsAge()).toEqual(188);
+      expect(test2.calculateMarsAge()).toEqual(53);
     });
 });
 
 describe('calculateJupiterAge', function() {
     it('should calculate and return the age in Jupiter years', function() {
       let test = new spaceAgeCalculator(35, 100);
-      expect(test.calculateJupiterAge()).toEqual(415);
+      expect(test.calculateJupiterAge()).toEqual(2);
 
       let test2 = new spaceAgeCalculator(100, 100);
-      expect(test2.calculateJupiterAge()).toEqual(1186);
+      expect(test2.calculateJupiterAge()).toEqual(8);
     });
 });
+
+// describe('remainingYearsMercury', function() {
+//     it('should return remaining years left', function() {
+//       let test = new spaceAgeCalculator(35, 50);
+//       expect(test.remainingYearsMercury()).toEqual(16);
+//
+//       // let test2 = new spaceAgeCalculator(100, 100);
+//       // expect(test2.remainingYearsMercury()).toEqual(0);
+//     });
+// });
