@@ -19,3 +19,13 @@ describe('calculateVenusAge', function() {
       expect(test2.calculateVenusAge()).toEqual(62);
     });
 });
+
+describe('calculateMarsAge', function() {
+    it('should calculate and return the age of Person in Mars years', function() {
+      let test = new spaceAgeCalculator(35, 100);
+      expect(test.calculateMarsAge()).toEqual(65);
+
+      let test2 = new spaceAgeCalculator(100, 100);
+      expect(test2.calculateMarsAge()).toEqual(188);
+    });
+});
