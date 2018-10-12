@@ -19,8 +19,14 @@ export class spaceAgeCalculator {
   }
 
   calculateMarsAge() {
-    const venusYears = 1.88;
-    let marsAge = Math.floor(this.currentAge * venusYears);
+    const marsYears = 1.88;
+    let marsAge = Math.floor(this.currentAge * marsYears);
     return marsAge;
+  }
+
+  calculateJupiterAge() {
+    const jupiterYears = 11.86;
+    let jupiterAge = Math.floor(this.currentAge * jupiterYears);
+    return jupiterAge;
   }
 }
