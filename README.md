@@ -1,4 +1,4 @@
-# Hair Salon
+# Space Age Calculator
 
 ##### JavaScript exercise By Victoria O., Epicodus - October 12, 2018
 
