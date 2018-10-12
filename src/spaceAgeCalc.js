@@ -1,13 +1,17 @@
-// let anchorDate = new Date();
 const mercuryYears = 0.24;
 const venusYears = 0.62;
 const marsYears = 1.88;
 const jupiterYears = 11.86;
+const avgLifeExpectancy = {
+  "male": 76,
+  "female": 81
+};
+
 
 export class spaceAgeCalculator {
-  constructor(currentAge, ageOfDeath) {
+  constructor(currentAge, gender) {
     this.currentAge = currentAge;
-    this.ageOfDeath = ageOfDeath;
+    this.gender = gender;
   }
 
   calculateMercuryAge() {
@@ -30,29 +34,48 @@ export class spaceAgeCalculator {
     return jupiterAge;
   }
 
+  lifeExpectancyMercury() {
+    let avgLifeMercury = Math.floor(avgLifeExpectancy[this.gender] / mercuryYears);
+    return avgLifeMercury;
+  }
+
+  lifeExpectancyVenus() {
+    let avgLifeVenus = Math.floor(avgLifeExpectancy[this.gender] / venusYears);
+    return avgLifeVenus;
+  }
+
+  lifeExpectancyMars() {
+    let avgLifeMars = Math.floor(avgLifeExpectancy[this.gender] / marsYears);
+    return avgLifeMars;
+  }
+
+  lifeExpectancyJupiter() {
+    let avgLifeJupiter = Math.floor(avgLifeExpectancy[this.gender] / jupiterYears);
+    return avgLifeJupiter;
+  }
+
   remainingYearsMercury() {
-    let deathAgeMercury = Math.floor(this.ageOfDeath / mercuryYears);
-    let yearsLeftMercury = deathAgeMercury - this.calculateMercuryAge();
+    let yearsLeftMercury = this.lifeExpectancyMercury() - this.calculateMercuryAge();
+    console.log(yearsLeftMercury);
     return yearsLeftMercury;
   }
 
   remainingYearsVenus() {
-    let deathAgeVenus = Math.floor(this.ageOfDeath / venusYears);
-    let yearsLeftVenus = deathAgeVenus - this.calculateVenusAge();
+    let yearsLeftVenus = this.lifeExpectancyVenus() - this.calculateVenusAge();
     return yearsLeftVenus;
   }
 
-  remainingYearsMars() {
-    let deathAgeMars = Math.floor(this.ageOfDeath / marsYears);
-    let yearsLeftMars = deathAgeMars - this.calculateMarsAge();
-    return yearsLeftMars;
-  }
-
-  remainingYearsJupiter() {
-    let deathAgeJupiter = Math.floor(this.ageOfDeath / jupiterYears);
-    let yearsLeftJupiter = deathAgeJupiter - this.calculateJupiterAge();
-    return yearsLeftJupiter;
-  }
+  // remainingYearsMars() {
+  //   let yearsLeftMercury = avgLifeExpectancy[this.gender] - this.calculateMercuryAge();
+  //   console.log(yearsLeftMercury);
+  //   return yearsLeftMercury;
+  // }
+  //
+  // remainingYearsJupiter() {
+  //   let yearsLeftMercury = avgLifeExpectancy[this.gender] - this.calculateMercuryAge();
+  //   console.log(yearsLeftMercury);
+  //   return yearsLeftMercury;
+  // }
 }
 
 
