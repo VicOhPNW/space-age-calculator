@@ -12,7 +12,6 @@ export class spaceAgeCalculator {
 
   calculateMercuryAge() {
     let mercuryAge = Math.floor(this.currentAge / mercuryYears);
-    console.log(mercuryAge);
     return mercuryAge;
   }
 
@@ -31,10 +30,33 @@ export class spaceAgeCalculator {
     return jupiterAge;
   }
 
-  // remainingYearsMercury() {
-  //   let deathAgeMercury = this.ageOfDeath / mercuryYears;
-  //   console.log(deathAgeMercury);
-  //   let yearsLeftMercury = deathAgeMercury - this.calculateMercuryAge();
-  //   return yearsLeftMercury;
-  // }
+  remainingYearsMercury() {
+    let deathAgeMercury = Math.floor(this.ageOfDeath / mercuryYears);
+    let yearsLeftMercury = deathAgeMercury - this.calculateMercuryAge();
+    return yearsLeftMercury;
+  }
+
+  remainingYearsVenus() {
+    let deathAgeVenus = Math.floor(this.ageOfDeath / venusYears);
+    let yearsLeftVenus = deathAgeVenus - this.calculateVenusAge();
+    return yearsLeftVenus;
+  }
+
+  remainingYearsMars() {
+    let deathAgeMars = Math.floor(this.ageOfDeath / marsYears);
+    let yearsLeftMars = deathAgeMars - this.calculateMarsAge();
+    return yearsLeftMars;
+  }
+
+  remainingYearsJupiter() {
+    let deathAgeJupiter = Math.floor(this.ageOfDeath / jupiterYears);
+    let yearsLeftJupiter = deathAgeJupiter - this.calculateJupiterAge();
+    return yearsLeftJupiter;
+  }
 }
+
+
+// const mercuryYears = 0.24;
+// const venusYears = 0.62;
+// const marsYears = 1.88;
+// const jupiterYears = 11.86;

@@ -40,12 +40,32 @@ describe('calculateJupiterAge', function() {
     });
 });
 
-// describe('remainingYearsMercury', function() {
-//     it('should return remaining years left', function() {
-//       let test = new spaceAgeCalculator(35, 50);
-//       expect(test.remainingYearsMercury()).toEqual(16);
-//
-//       // let test2 = new spaceAgeCalculator(100, 100);
-//       // expect(test2.remainingYearsMercury()).toEqual(0);
-//     });
-// });
+describe('remainingYearsMercury', function() {
+    it('should return remaining years left', function() {
+      let test = new spaceAgeCalculator(35, 100);
+      expect(test.remainingYearsMercury()).toEqual(271);
+
+      let test2 = new spaceAgeCalculator(100, 100);
+      expect(test2.remainingYearsMercury()).toEqual(0);
+    });
+});
+
+describe('remainingYearsVenus', function() {
+    it('should return remaining years left', function() {
+      let test = new spaceAgeCalculator(35, 100);
+      expect(test.remainingYearsVenus()).toEqual(105);
+
+      let test2 = new spaceAgeCalculator(100, 100);
+      expect(test2.remainingYearsVenus()).toEqual(0);
+    });
+});
+
+describe('remainingYearsJupiter', function() {
+    it('should return remaining years left', function() {
+      let test = new spaceAgeCalculator(35, 100);
+      expect(test.remainingYearsJupiter()).toEqual(6);
+
+      let test2 = new spaceAgeCalculator(100, 100);
+      expect(test2.remainingYearsJupiter()).toEqual(0);
+    });
+});
