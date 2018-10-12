@@ -6,15 +6,17 @@ export class spaceAgeCalculator {
     this.ageOfDeath = ageOfDeath;
   }
 
-  mercuryAge() {
+  calculateMercuryAge() {
     const mercuryYears = 0.24;
     let mercuryAge = Math.floor(this.currentAge * mercuryYears);
+    console.log(mercuryAge);
     return mercuryAge;
   }
 
-  venusAge() {
+  calculateVenusAge() {
     const venusYears = 0.62;
-    let mercuryAge = Math.floor(this.currentAge * mercuryYears);
-    return mercuryAge;
+    let venusAge = Math.floor(this.currentAge * venusYears);
+    console.log(venusAge);
+    return venusAge;
   }
 }
