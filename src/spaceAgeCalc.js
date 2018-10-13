@@ -74,9 +74,3 @@ export class spaceAgeCalculator {
     return yearsLeftJupiter;
   }
 }
-
-
-// const mercuryYears = 0.24;
-// const venusYears = 0.62;
-// const marsYears = 1.88;
-// const jupiterYears = 11.86;
