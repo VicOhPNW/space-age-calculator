@@ -86,39 +86,39 @@ describe('lifeExpectancyJupiter', function() {
 describe('remainingYearsMercury', function() {
     it('should return remaining years left', function() {
       let test = new spaceAgeCalculator(35, "male");
-      expect(test.remainingYearsMercury()).toEqual(171);
+      expect(test.remainingYearsMercury()).toEqual('You have ${yearsLeftMercury} years left on Mercury.');
 
       let test2 = new spaceAgeCalculator(100, "female");
-      expect(test2.remainingYearsMercury()).toEqual(-79);
+      expect(test2.remainingYearsMercury()).toEqual('You have lived Math.abs(${yearsLeftMercury}) years beyond expectancy.');
     });
 });
 
 describe('remainingYearsVenus', function() {
     it('should return remaining years left', function() {
       let test = new spaceAgeCalculator(35, "male");
-      expect(test.remainingYearsVenus()).toEqual(66);
+      expect(test.remainingYearsVenus()).toEqual('You have ${yearsLeftVenus} years left on Mercury.');
 
       let test2 = new spaceAgeCalculator(100, "female");
-      expect(test2.remainingYearsVenus()).toEqual(-31);
+      expect(test2.remainingYearsVenus()).toEqual('You have lived Math.abs(${yearsLeftVenus}) years beyond expectancy.');
     });
 });
 
 describe('remainingYearsMars', function() {
     it('should return remaining years left', function() {
       let test = new spaceAgeCalculator(35, "male");
-      expect(test.remainingYearsMars()).toEqual(22);
+      expect(test.remainingYearsMars()).toEqual('You have ${yearsLeftMars} years left on Mercury.');
 
       let test2 = new spaceAgeCalculator(100, "female");
-      expect(test2.remainingYearsMars()).toEqual(-10);
+      expect(test2.remainingYearsMars()).toEqual('You have lived Math.abs(${yearsLeftMars}) years beyond expectancy.');
     });
 });
 
 describe('remainingYearsJupiter', function() {
     it('should return remaining years left', function() {
       let test = new spaceAgeCalculator(35, "male");
-      expect(test.remainingYearsJupiter()).toEqual(4);
+      expect(test.remainingYearsJupiter()).toEqual('You have ${yearsLeftJupiter} years left on Mercury.');
 
       let test2 = new spaceAgeCalculator(100, "female");
-      expect(test2.remainingYearsJupiter()).toEqual(-2);
+      expect(test2.remainingYearsJupiter()).toEqual('You have lived Math.abs(${yearsLeftJupiter}) years beyond expectancy.');
     });
 });
