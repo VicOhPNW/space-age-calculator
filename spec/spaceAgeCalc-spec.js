@@ -90,32 +90,32 @@ describe('remainingYearsMercury', function() {
     });
 });
 
-// describe('remainingYearsVenus', function() {
-//     it('should return remaining years left', function() {
-//       let test = new spaceAgeCalculator(35, "male");
-//       expect(test.remainingYearsVenus()).toEqual(66);
-//
-//       let test2 = new spaceAgeCalculator(100, "female");
-//       expect(test2.remainingYearsVenus()).toEqual(-39);
-//     });
-// });
+describe('remainingYearsVenus', function() {
+    it('should return remaining years left', function() {
+      let test = new spaceAgeCalculator(35, "male");
+      expect(test.remainingYearsVenus()).toEqual(66);
 
-// describe('remainingYearsJupiter', function() {
-//     it('should return remaining years left', function() {
-//       let test = new spaceAgeCalculator(35, "male");
-//       expect(test.remainingYearsJupiter()).toEqual(6);
-//
-//       let test2 = new spaceAgeCalculator(100, "female");
-//       expect(test2.remainingYearsJupiter()).toEqual(0);
-//     });
-// });
-//
-// describe('remainingYearsJupiter', function() {
-//     it('should return remaining years left', function() {
-//       let test = new spaceAgeCalculator(35, "male");
-//       expect(test.remainingYearsJupiter()).toEqual(6);
-//
-//       let test2 = new spaceAgeCalculator(100, "female");
-//       expect(test2.remainingYearsJupiter()).toEqual(0);
-//     });
-// });
+      let test2 = new spaceAgeCalculator(100, "female");
+      expect(test2.remainingYearsVenus()).toEqual(-31);
+    });
+});
+
+describe('remainingYearsMars', function() {
+    it('should return remaining years left', function() {
+      let test = new spaceAgeCalculator(35, "male");
+      expect(test.remainingYearsMars()).toEqual(22);
+
+      let test2 = new spaceAgeCalculator(100, "female");
+      expect(test2.remainingYearsMars()).toEqual(-10);
+    });
+});
+
+describe('remainingYearsJupiter', function() {
+    it('should return remaining years left', function() {
+      let test = new spaceAgeCalculator(35, "male");
+      expect(test.remainingYearsJupiter()).toEqual(4);
+
+      let test2 = new spaceAgeCalculator(100, "female");
+      expect(test2.remainingYearsJupiter()).toEqual(-2);
+    });
+});

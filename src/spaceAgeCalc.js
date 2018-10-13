@@ -56,7 +56,6 @@ export class spaceAgeCalculator {
 
   remainingYearsMercury() {
     let yearsLeftMercury = this.lifeExpectancyMercury() - this.calculateMercuryAge();
-    console.log(yearsLeftMercury);
     return yearsLeftMercury;
   }
 
@@ -65,17 +64,15 @@ export class spaceAgeCalculator {
     return yearsLeftVenus;
   }
 
-  // remainingYearsMars() {
-  //   let yearsLeftMercury = avgLifeExpectancy[this.gender] - this.calculateMercuryAge();
-  //   console.log(yearsLeftMercury);
-  //   return yearsLeftMercury;
-  // }
-  //
-  // remainingYearsJupiter() {
-  //   let yearsLeftMercury = avgLifeExpectancy[this.gender] - this.calculateMercuryAge();
-  //   console.log(yearsLeftMercury);
-  //   return yearsLeftMercury;
-  // }
+  remainingYearsMars() {
+    let yearsLeftMars = this.lifeExpectancyMars() - this.calculateMarsAge();
+    return yearsLeftMars;
+  }
+
+  remainingYearsJupiter() {
+    let yearsLeftJupiter = this.lifeExpectancyJupiter() - this.calculateJupiterAge();
+    return yearsLeftJupiter;
+  }
 }
 
 
