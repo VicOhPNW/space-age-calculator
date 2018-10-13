@@ -14,6 +14,7 @@ export class spaceAgeCalculator {
     this.gender = gender;
   }
 
+//convert earth age to respective planet age
   calculateMercuryAge() {
     let mercuryAge = Math.floor(this.currentAge / mercuryYears);
     return mercuryAge;
@@ -34,6 +35,7 @@ export class spaceAgeCalculator {
     return jupiterAge;
   }
 
+//convert earth life expectancy age to respective planet's
   lifeExpectancyMercury() {
     let avgLifeMercury = Math.floor(avgLifeExpectancy[this.gender] / mercuryYears);
     return avgLifeMercury;
@@ -54,6 +56,7 @@ export class spaceAgeCalculator {
     return avgLifeJupiter;
   }
 
+//calculate remaining years
   remainingYearsMercury() {
     let yearsLeftMercury = this.lifeExpectancyMercury() - this.calculateMercuryAge();
     return yearsLeftMercury;

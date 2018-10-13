@@ -1,5 +1,6 @@
 import { spaceAgeCalculator } from '../src/spaceAgeCalc.js';
 
+//test for converting age
 describe('calculateMercuryAge', function() {
     it('should calculate and return the age in Mercury years', function() {
       let test = new spaceAgeCalculator(35, "male");
@@ -40,6 +41,7 @@ describe('calculateJupiterAge', function() {
     });
 });
 
+//tests for converting life expectancy
 describe('lifeExpectancyMercury', function() {
     it('should calculate and return the average life expectancy in Mercury', function() {
       let test = new spaceAgeCalculator(35, "male");
@@ -80,6 +82,7 @@ describe('lifeExpectancyJupiter', function() {
     });
 });
 
+//test for remaining years
 describe('remainingYearsMercury', function() {
     it('should return remaining years left', function() {
       let test = new spaceAgeCalculator(35, "male");
